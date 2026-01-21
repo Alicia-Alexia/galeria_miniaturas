@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Miniaturas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-6">
+
+    <main class="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden p-6 space-y-6">
+        
+        <header class="text-center">
+            <h1 class="text-3xl font-bold text-gray-800 tracking-tight">Galeria Minimalista</h1>
+            <p class="text-gray-500 mt-2">Selecione uma miniatura para expandir</p>
+        </header>
+
+        <div class="relative w-full h-96 rounded-xl overflow-hidden shadow-sm group">
+            <img 
+                id="main-image"
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" 
+                alt="Imagem Principal" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            >
+        </div>
+
+        <div class="flex justify-center gap-4" id="thumbnails-container">
+            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                <img 
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=200&auto=format&fit=crop" 
+                    alt="Montanhas" 
+                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-100"
+                    data-full="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop"
+                >
+            </button>
+
+            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                <img 
+                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=200&auto=format&fit=crop" 
+                    alt="Floresta com neblina" 
+                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-60 hover:opacity-100 transition-opacity"
+                    data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+                >
+            </button>
+
+            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                <img 
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=200&auto=format&fit=crop" 
+                    alt="Floresta ensolarada" 
+                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-60 hover:opacity-100 transition-opacity"
+                    data-full="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop"
+                >
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>

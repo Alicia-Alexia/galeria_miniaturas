@@ -2,7 +2,7 @@
 
 
 ![Project Preview](assets/img/image.png)
-## 🔗 [Clique aqui para ver o Demo Online](https://seu-usuario.github.io/nome-do-repositorio)
+## 🔗 [Clique aqui para ver o Demo Online](https://alicia-alexia.github.io/galeria_miniaturas/)
 
 ## 📋 Sobre o Projeto
 

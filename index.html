@@ -7,54 +7,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/script.js" defer></script>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen p-6">
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800">
 
-    <main class="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden p-6 space-y-6">
+<main class="flex-grow flex items-center justify-center p-6">
         
-        <header class="text-center">
-            <h1 class="text-3xl font-bold text-gray-800 tracking-tight">Galeria Minimalista</h1>
-            <p class="text-gray-500 mt-2">Selecione uma miniatura para expandir</p>
-        </header>
+        <div class="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden p-6 space-y-6">
+            
+            <header class="text-center">
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900">Galeria Minimalista</h1>
+                <p class="text-sm text-gray-500 mt-2 font-medium uppercase tracking-wider">Selecione para expandir</p>
+            </header>
 
-        <div class="relative w-full h-96 rounded-xl overflow-hidden shadow-sm group">
-            <img 
-                id="main-image"
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" 
-                alt="Imagem Principal" 
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            >
+            <div class="relative w-full h-96 rounded-xl overflow-hidden shadow-inner bg-gray-100 group">
+                <img 
+                    id="main-image"
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Imagem Principal" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                >
+            </div>
+
+            <div class="flex justify-center gap-4" id="thumbnails-container">
+                <button class="thumbnail-btn group focus:outline-none">
+                    <img 
+                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=200&auto=format&fit=crop" 
+                        alt="Montanhas" 
+                        class="w-24 h-24 object-cover rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 ring-2 ring-blue-500 ring-offset-2 opacity-100"
+                        data-full="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop"
+                    >
+                </button>
+
+                <button class="thumbnail-btn group focus:outline-none">
+                    <img 
+                        src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=200&auto=format&fit=crop" 
+                        alt="Floresta Neblina" 
+                        class="w-24 h-24 object-cover rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 opacity-60 group-hover:opacity-100"
+                        data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
+                    >
+                </button>
+
+                <button class="thumbnail-btn group focus:outline-none">
+                    <img 
+                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=200&auto=format&fit=crop" 
+                        alt="Floresta Sol" 
+                        class="w-24 h-24 object-cover rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 opacity-60 group-hover:opacity-100"
+                        data-full="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop"
+                    >
+                </button>
+            </div>
         </div>
-
-        <div class="flex justify-center gap-4" id="thumbnails-container">
-            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
-                <img 
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=200&auto=format&fit=crop" 
-                    alt="Montanhas" 
-                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-100"
-                    data-full="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop"
-                >
-            </button>
-
-            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
-                <img 
-                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=200&auto=format&fit=crop" 
-                    alt="Floresta com neblina" 
-                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-60 hover:opacity-100 transition-opacity"
-                    data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop"
-                >
-            </button>
-
-            <button class="thumbnail-btn focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
-                <img 
-                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=200&auto=format&fit=crop" 
-                    alt="Floresta ensolarada" 
-                    class="w-24 h-24 object-cover rounded-lg shadow-md hover:shadow-lg opacity-60 hover:opacity-100 transition-opacity"
-                    data-full="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop"
-                >
-            </button>
-        </div>
-
     </main>
+
+    <footer class="bg-white border-t border-gray-100 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-xs text-gray-400 font-medium">
+                Desenvolvido como parte do desafio técnico #DailyCode Saboroso Dev
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
